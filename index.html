@@ -4,68 +4,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+   
   <title>
     DS9 Quiz
   </title>
+  
   <link rel="stylesheet" type="text/css" href="main.css" />
   <link rel="stylesheet" type="text/css" href="grid.css" />
 </head>
 
 <body>
+  <header role="banner">
+    <h1>Star Trek : Deep Space Nine</h1>
+    <h2>Quiz</h2>
+  </header>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="index.js"></script>
   <main role="main">
-      <div class="row">
-          <div class="col">
-    <section class="start-quiz-container" role="region">
-      <header role="banner">
-        <h1>Star Trek : Deep Space Nice</h1>
-        <h2>Quiz</h2>
-      </header>
-      <label for="start-quiz"> Ready to begin?</label>
+    <div class="row">
+      <div class="col">
+        <section class="start-quiz-container" role="region">
+          
+          <label for="start-quiz"> Ready to begin?</label>
 
-      <button id="quizStart" type="submit">Start Quiz</button>
-    </section>
+          <button id="quizStart" type="submit">Start Quiz</button>
+        </section>
 
-    <form id="quizAnswers">
-    <section class="question-container hidden" role="region">
-      <legend>
-        <label id="lbQuestion"></label>
-      </legend>
-      <input type="radio" name="answer" id="ans1" value="0" tabindex="1"  required>
-      <label for="ans1" id=answ1></label>
-      <br>
-      <input type="radio" name="answer" id="ans2" value="1" tabindex="2">
-      <label for="ans2" id=answ2></label>
-      <br>
-      <input type="radio" name="answer" id="ans3" value="2" tabindex="3">
-      <label for="ans3" id=answ3></label>
-      <br>
-      <input type="radio" name="answer" id="ans4" value="3" tabindex="4">
-      <label for="ans4" id=answ4></label>
-      <br>
-    <input id="btnSubmitAnswer" type="submit" value="Submit Answer">
-    </form>
+        <form id="quizAnswers">
+          <section class="question-container hidden" role="region">
+            <legend>
+              <label id="lbQuestion"></label>
+            </legend>
+            <input type="radio" name="answer" id="ans1" value="0" tabindex="1" required>
+            <label for="ans1" id=answ1></label>
+            <br>
+            <input type="radio" name="answer" id="ans2" value="1" tabindex="2">
+            <label for="ans2" id=answ2></label>
+            <br>
+            <input type="radio" name="answer" id="ans3" value="2" tabindex="3">
+            <label for="ans3" id=answ3></label>
+            <br>
+            <input type="radio" name="answer" id="ans4" value="3" tabindex="4">
+            <label for="ans4" id=answ4></label>
+            <br>
+            <input id="btnSubmitAnswer" type="submit" value="Submit Answer">
+        </form>
 
-      <div id="imgContainer">
-        <img id="questImg" />
+        <div id="imgContainer">
+          <img id="questImg" />
+        </div>
+        <div id="question" class="hidden ans">
+          <p>
+            <strong>Question
+              <span id="quesNum"></span>:</strong>The correct answer is
+            <strong>
+              <span id="quesAns"></span>
+            </strong>.</p>
+        </div>
+        <p> You are on question
+          <span id="quesC"> </span> of 10</p>
+        <br>
+        <input class="hidden" id="btnNext" type="submit" value="Next Question">
+        <br>
+        <div class="score" id="quiz score"></div>
       </div>
-      <div id="question" class="hidden ans">
-        <p>
-          <strong>Question
-            <span id="quesNum"></span>:</strong>The correct answer is
-          <strong>
-            <span id="quesAns"></span>
-          </strong>.</p>
-      </div>
-      <p> You are on question
-        <span id="quesC"> </span> of 10</p>
-      <br>
-      <input class="hidden" id="btnNext" type="submit" value="Next Question">
-      <br>
-      <div class="score" id="quiz score"></div>
-      </div>
-      </div>
+    </div>
     </section>
     <section role="region">
       <div id="results" class="results page hidden ">
